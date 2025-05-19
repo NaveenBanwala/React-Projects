@@ -1,0 +1,27 @@
+.app-container{
+  display:flex;
+
+}
+
+.content{
+  width :100%;
+
+}
+
+.sidebar{
+  min-height : 700px;
+}
+
+.post-card {
+  margin:20px 50px;
+  min-width: 30rem;
+}
+
+.hashtag{
+  margin : 0px 2px;
+}
+
+.form-create-post{
+  width : 50%;
+  margin :30px;
+}
