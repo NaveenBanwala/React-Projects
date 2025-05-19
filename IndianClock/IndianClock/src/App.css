@@ -1,0 +1,30 @@
+.outer-container{
+    position:relative;
+    height:100vh;
+    width:100vw;
+    background-color:grey;
+    display :flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.inner-container{
+    position:absolute; 
+    top:10%;
+    /* transform:translate(-50%,-50%); */
+    text-align:center;
+    color:white;
+    height:80vh;
+    width:80vw;
+    background-color:burlywood;
+}
+
+.clock-slogan{
+    font-size:2rem;
+    font-weight: 600;
+}
+
+.IndianClock{
+    color : white;
+    font-size :4rem;
+}

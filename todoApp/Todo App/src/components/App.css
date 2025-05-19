@@ -1,0 +1,19 @@
+
+.inputCss{
+  width: 100%;
+  height: 40px;
+
+}
+button{
+  width:100%;
+  height:40px;
+}
+
+.todo-List{
+  text-align:left;
+}
+
+.spacing{
+  margin:15px;
+  margin-top:5px;
+}
