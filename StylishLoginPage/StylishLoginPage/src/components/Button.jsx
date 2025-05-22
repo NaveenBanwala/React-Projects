@@ -48,7 +48,7 @@ return (
     style={{ display: "flex", justifyContent: positions[initalAlignment] }}
     >
     <button {...( value ? {onMouseEnter : handleMouseEnter} : {onClick :handleClick})}>
-        Submit
+        Log In
     </button>
 
     </div>

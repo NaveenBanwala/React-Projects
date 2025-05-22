@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
+import HeaderName from "./HeaderName";
 
 function InputContainer({ positions, initalAlignment, setAlignment }) {
 const [initalEmail, setEmail] = useState("");
@@ -7,6 +8,7 @@ const [initalPass, setPass] = useState("");
 
 return (
     <div className="input-container">
+        <HeaderName/>
     <input
         type="email"
         placeholder="Enter your mail id"

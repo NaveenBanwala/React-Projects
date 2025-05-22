@@ -4,56 +4,84 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #777; /* gray background as seen */
+  background-color: #777; 
+  position : relative;
 }
-
-.inner-container {
+.inner-container{
+  position :absolute;
+  height :70%;
+  width: 80%;
   padding: 20px;
+  border-radius: 50px;
   background-color: #999;
   border: 2px solid black;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  display : flex;  
+  
+  justify-content: space-between; 
+
 }
 
-.login-page-header {
-  background-color: #b22222;
-  color: white;
-  padding: 10px;
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
+.login-page {
+  width : 50%;
+  height: 100%;
+  margin-right :5px;
+  border-radius: 50px;
+  /* display : flex; */
+  /* flex-direction: column; */
+  /* align-items :center;
+  justify-content: center; */
+}
+
+.sinup-page{
+    width :50%;
+    /* position: absolute; */
+    background-color: blue;
+    height: 100%;
+    border-radius: 50px;
+    margin-left :5px;
+    display : flex;
+    flex-direction: column;
+    align-items :center;
+    justify-content: center;
+
+} 
+
+.sinup-page p{
+  color:white;
+  text-shadow: black;
+  font-size: large;
+  font-family: 'Courier New';
+  font-weight: 800;
+  font-size: xx-large;
 }
 
 .input-container {
-  display: flex;
+  background-color: aquamarine;
+  border-radius: 50px;
+  display :flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
+  justify-content: center; 
+  gap:10px;
+  height:100%;
+  width:100%;
+} 
+
+input{
+  width :50%;
+  align-self: center;
+  padding:12px;
 }
 
-.input-container input {
-  width: 60%;
-  padding: 10px;
-  font-size: 16px;
+button{
+  color : white;
+  background-color: red;
+  padding: 0.5em 1em;
+  font-size: 0.5rem;
 }
 
-.button-container {
-  /* display: flex; */
-  /* justify-content: center; */
-  width: 100%;
-}
-
-.button-container button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #28a745; /* Bootstrap green */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.login-page-header{
+  font-family: 'Courier New';
+  font-weight: 800;
+  font-size: xx-large;
+  text-align: center;
 }

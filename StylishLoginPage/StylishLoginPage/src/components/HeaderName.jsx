@@ -1,7 +1,8 @@
 function HeaderName(){
     return(
-        <div className="login-page-header">Login Page</div>
-
+        <div className="login-page-header">
+        Welcome to  Login Page
+            </div>
     );
 }
 
