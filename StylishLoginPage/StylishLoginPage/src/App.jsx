@@ -4,54 +4,35 @@ import './App.css';
 
 function App() {
   const positions = ["center", "flex-start", "flex-end"];
-
-  const [Location , setLocation]=useState(true); // For login and Sinup page.
+  const [Location, setLocation] = useState(true); // true = login
   const [initalAlignment, setAlignment] = useState(0);
 
-
-  const moveToRight = ()=>{
+  const toggleForm = () => {
     setLocation(!Location);
-
-  }
+  };
 
   return (
     <div className="outer-container">
       <div className="inner-container">
-        { Location ? (
-          <>
-      <div className="login-page" >
-        <InputContainer
-          positions={positions}
-          initalAlignment={initalAlignment}
-          setAlignment={setAlignment}
-        />
-      </div>
-      <div className="sinup-page" >
-        <p>Create a New Account </p>
-        <button onClick={moveToRight}>Sin Up</button>
-      </div> 
-      </>
-        ) 
-      : 
-      (
-        <>
-      <div className="login-page">
-        <InputContainer
-          positions={positions}
-          initalAlignment={initalAlignment}
-          setAlignment={setAlignment}
-        />
-      </div>
-      <div className="sinup-page" >
-        <p>Already have an account </p>
-        <button onClick={moveToRight}>Log In</button>
-      </div>
-      </>
-      )}
+        <div className={`form-section ${Location ? 'left' : 'right'}`}>
+          <InputContainer
+            isLogin={Location}
+            positions={positions}
+            initalAlignment={initalAlignment}
+            setAlignment={setAlignment}
+          />
+        </div>
+
+        <div className={`form-section ${Location ? 'right' : 'left'} other-side`}>
+          <p>{Location ? 'Create a New Account' : 'Already have an account?'}</p>
+          <button onClick={toggleForm}>{ Location ? 'Create Account' : 'Log In' }</button>
+        </div>
       </div>
     </div>
   );
 }
 
 export default App;
+
+
 

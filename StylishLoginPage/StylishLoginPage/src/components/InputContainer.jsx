@@ -1,14 +1,15 @@
+
 import { useState } from "react";
 import Button from "./Button";
 import HeaderName from "./HeaderName";
 
-function InputContainer({ positions, initalAlignment, setAlignment }) {
+function InputContainer({ isLogin, positions, initalAlignment, setAlignment }) {
 const [initalEmail, setEmail] = useState("");
 const [initalPass, setPass] = useState("");
 
 return (
     <div className="input-container">
-        <HeaderName/>
+    <HeaderName isLogin={isLogin} />
     <input
         type="email"
         placeholder="Enter your mail id"
@@ -21,13 +22,13 @@ return (
         value={initalPass}
         onChange={(e) => setPass(e.target.value)}
     />
-
     <Button
         positions={positions}
         initalAlignment={initalAlignment}
         setAlignment={setAlignment}
         initalEmail={initalEmail}
         initalPass={initalPass}
+        isLogin={isLogin}
     />
     </div>
 );
