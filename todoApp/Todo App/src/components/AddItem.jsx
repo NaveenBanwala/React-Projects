@@ -1,6 +1,23 @@
-import "./App.css";
 
-function AddItem({TodoName, TodoDate}){
+import { useContext } from "react";
+import "./App.css";
+import { MyContext } from "../Store/TodoProvider";
+
+function AddItem({TodoId,TodoDate,TodoName}){
+
+    const {dispatcher} = useContext(MyContext);
+
+    const handleForRemove =()=>{
+            dispatcher(
+                {
+                    type : "REMOVE_TODO",
+                    payload :{
+                        id :TodoId
+                    }
+                }
+            );
+        
+    }
     
     return (
         <div className="container">
@@ -12,7 +29,7 @@ function AddItem({TodoName, TodoDate}){
         {TodoDate}</div>
 
         <div className="col-2">
-        <button type="button" class="btn btn-danger">Remove</button>
+        <button  onClick={handleForRemove} type="button" class="btn btn-danger">Remove</button>
         </div>
         </div>
         </div>

@@ -1,46 +1,30 @@
-
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
 import "./components/App.css";
-// import AddItem from "./components/AddItem"; 
 import TodoItem from "./components/TodoItems";
+import TodoProvider from "./Store/TodoProvider";
+import Container from "./components/Container";
 
 function App() {
-  const addItems=[
-    {name :"Buy Milk",
-    date :"01/June/2025"
-    },
-    {name :"Buy Milk",
-    date :"01/June/2025"
-    },
-    {name :"Buy Milk",
-    date :"01/June/2025"
-    },
-  ]
-  const App ={
+  const appStyle = {
     backgroundColor: "#FFF8DC",
-    position:"relative",
-    height:"100vh",
-    width :"100vw",
-    display:"flex",
-    justifyContent:"center",
-    // alignItems:"center",
-  }
-  const todoAppContainer = {
-    position : "absolute",
-    top: "10%",
-    height: "80%",
-    width : "60%",
-  }
+    minHeight: "100vh",
+    width: "100vw",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start", // top aligned
+    paddingTop: "50px", // spacing from top
+  };
+
   return (
-    <div style={App}>
-    <div className="todo-app-container" style={todoAppContainer}>
-      <AppName/>
-
-      <AddTodo></AddTodo>
-
-    <TodoItem className="todoItems" addItems={addItems}/>
-    </div>
+    <div style={appStyle}>
+      <TodoProvider>
+        <Container>
+          <AppName />
+          <AddTodo />
+          <TodoItem className="todoItems" />
+        </Container>
+      </TodoProvider>
     </div>
   );
 }
